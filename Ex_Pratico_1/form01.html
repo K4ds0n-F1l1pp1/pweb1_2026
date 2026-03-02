@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário do Curso</title>
+</head>
+<body>
+    <form action="/action_page.html">
+        <fieldset style="width: 430px;">
+            <legend style="font-size: 22px;"><strong>Formulário de Matrícula no Curso</strong></legend>
+
+            <form>
+                    <label for="nome" required>Primeiro Nome: </label><br>
+                    <input type="text" name="alunoPrimeiroNome" required> <br>
+                    <label for="nome">Sobrenome: </label><br>
+                    <input type="text" name="alunoSobreome" required>
+                
+
+                <p style="font-size: 20px;"><strong>Curso</strong></p>
+
+                
+                    <input type="radio" id="info" name="curso" value="info" required>
+                    <label for="info">Técnico em Informática</label> <br>
+
+                    <input type="radio" id="devSis" name="curso" value="devSis" required>
+                    <label for="devSis">Graduação - Análise e Desenvolvimento de Sistemas</label> <br>
+
+                    <input type="radio" id="web" name="curso" value="web" required>
+                    <label for="web">Profissionalizante  - Programação Web</label> <br>
+                
+
+                <p style="font-size: 20px;"><strong>Linguagem de Programação de sua Preferência: </strong></p>
+
+                
+                    <input type="checkbox" id="php" name="curso" value="php">
+                    <label for="php">PHP</label> <br>
+
+                    <input type="checkbox" id="java" name="curso" value="java">
+                    <label for="java">Java</label> <br>
+
+                    <input type="checkbox" id="python" name="curso" value="python">
+                    <label for="python">Python</label> <br>
+                
+
+                <p style="font-size: 20px;"><strong>Escolha um Turno: </strong></p>
+
+                <select name="turnos">
+                    <option value="#"></option>
+                    <option value="manha">Manhã</option>
+                    <option value="tarde">Tarde</option>
+                    <option value="noite">noite</option>
+                </select>
+
+                <p style="font-size: 20px;"><strong>Selecione a Unidade mais próxima: </strong></p>
+
+                <label for="cidade"></label>
+                <input list="cidades" name="cidade" id="cidade">
+
+                <datalist id="cidades">
+                    <option value="#">
+                    <option value="Chapecó">
+                    <option value="Abu Dhabi">
+                    <option value="Xangai">
+                    <option value="Florianopólis">
+                    <option value="Baurú">
+                </datalist>
+
+                <br><br><br>
+
+                <button>Enviar</button>
+            </form>
+        </fieldset>
+    </form>
+</body>
+</html>

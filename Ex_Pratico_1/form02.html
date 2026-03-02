@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão</title>
+</head>
+<body>
+    <form action="/action_page.html">
+        <fieldset style="width: 430px;">
+            <legend style="font-size: 22px;"><strong>Sistema de Gestão Acadêmica</strong></legend>
+
+            <form>
+                    <label for="login" required>Login: </label><br>
+                    <input type="text" name="login" required maxlength="16"> <br>
+                    <label for="pw">Senha: </label><br>
+                    <input type="password" name="pw" required>
+                
+                <p style="font-size: 20px;"><strong>Status</strong></p>
+
+                <select name="ativoInativo">
+                    <option value="#"></option>
+                    <option value="true">Ativo</option>
+                    <option value="false">Inativo</option>
+                </select>
+                
+
+                <p style="font-size: 20px;"><strong>Tipo: </strong></p>
+
+                
+                    <input type="radio" id="tecnico" name="curso" value="tecnico">
+                    <label for="tecnico">Técnico</label>
+
+                    <input type="radio" id="prof" name="curso" value="prof">
+                    <label for="prof">Professor</label>
+
+                    <input type="radio" id="aluno" name="curso" value="aluno">
+                    <label for="aluno">Aluno</label>
+
+                <p style="font-size: 20px;"><strong>Data Criação: </strong></p>
+
+                <label for="dia">Insira a Data:</label>
+                <input type="date" id="dia" name="dia">
+
+                <p style="font-size: 20px;"><strong>Perfil: </strong></p>
+
+                    <input type="radio" id="convidade" name="tipoPerfil" value="tecnico">
+                    <label for="convidado">Convidado</label>
+
+                    <input type="radio" id="adm" name="tipoPerfil" value="adm">
+                    <label for="adm">Administrador</label>
+                
+                <p style="font-size: 20px;"><strong>Observação: </strong></p>
+
+                <textarea id="obs" name="obs" rows="4" cols="50" placeholder="Deixe aqui as observações necessárias..."></textarea>
+
+                <br><br><br>
+
+                <button>Salvar</button>
+                <button>
+                    <a href="./form02.html" style="text-decoration: none;">Excluir</a>
+                </button>
+            </form>
+        </fieldset>
+    </form>
+</body>
+</html>
