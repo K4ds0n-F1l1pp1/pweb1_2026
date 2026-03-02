@@ -7,8 +7,10 @@
 </head>
 <body>
     <form action="/action_page.html">
-        <fieldset style="width: 430px;">
+        <fieldset style="width: 450px;">
             <legend style="font-size: 22px;"><strong>Sistema de Gestão Acadêmica</strong></legend>
+
+            <p style="font-size: 20px; text-align: center;"><strong>Sistema de Gestão Acadêmica</strong></p>
 
             <form>
                     <label for="login" required>Login: </label><br>
@@ -51,6 +53,23 @@
                 <p style="font-size: 20px;"><strong>Observação: </strong></p>
 
                 <textarea id="obs" name="obs" rows="4" cols="50" placeholder="Deixe aqui as observações necessárias..."></textarea>
+
+                <p style="font-size: 20px;"><strong>Módulos: </strong></p>
+
+                    <input type="checkbox" id="compras" name="mod1" value="compras">
+                    <label for="compras">Compras</label>
+
+                    <input type="checkbox" id="biblio" name="mod2" value="biblio">
+                    <label for="biblio">Biblioteca</label>
+
+                    <input type="checkbox" id="academico" name="mod3" value="academico">
+                    <label for="academico">Acadêmico</label>
+
+                    <input type="checkbox" id="doc" name="mod3" value="doc">
+                    <label for="doc">Documentação</label> <br>
+
+                    <input type="checkbox" id="recursos" name="mod3" value="recursos">
+                    <label for="recursos">Recursos Humanos</label>
 
                 <br><br><br>
 
