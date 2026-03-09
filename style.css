@@ -2,90 +2,81 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    font-family: sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    gap: 10px;
-    background-color: #f4f4f4;
+:root
+{
+    --title-base: #e03010;
+    --text: #000;
+    --yvetal-base: #282d31;
+    --yvetal-medio: #982e3b;
+    --yvetal-alto: #3c4247;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+.titleHead 
+{
+    color: var(--title-base);
+    font-size: 44px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px
+}
+
+.func
+{
     text-align: center;
+    color:var(--title-base)
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 40px;
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-header::after { content: "Portal de Notícias"; }
-
-nav {
-    background-color: #e5e7eb;
-    padding: 10px;
+.link
+{
+    text-decoration: none;
+    color: var(--yvetal-medio);
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+.imgTitle
+{
+    width: 160px;
 }
 
-nav a {
-    color: #333;
-    font-weight: bold;
-    transition: 0.3s;
+body 
+{
+    background-color: var(--yvetal-alto);
+    color: var(--text);
 }
 
-nav a:hover {
-    color: #2563eb;
-}
-
-main {
-    display: flex;
-    flex: 1;
-    gap: 10px;
-    padding: 0 10px;
-}
-
-aside {
-    flex: 1;
-    background-color: #e5e7eb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.main-content {
-    flex: 3;
-    background-color: #e5e7eb;
+header 
+{
+    background: linear-gradient(90deg, var(--yvetal-base), var(--yvetal-medio));
+    color: var(--text);
+    text-align: center;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    border-bottom: 2px solid var(--title-base);
 }
 
-footer {
-    background-color: #e5e7eb;
+.imgTitle 
+{
+    height: 180px;
+    width: 370px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.imgTitle:hover 
+{
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 8px var(--title-base));
+}
+
+footer 
+{
+    background-color:  var(--yvetal-base);
     padding: 20px;
+    text-align: center;
+    color: #ffff;
 }
 
-img, video {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #ccc;
-}
-
-button {
-    padding: 10px 20px;
-    cursor: pointer;
-    background: white;
-    border: 1px solid #333;
-}
