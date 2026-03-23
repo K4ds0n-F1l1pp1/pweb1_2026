@@ -23,3 +23,36 @@
     border: none;
     padding: 5px;
 }
+
+.menuLateral
+{
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: var(--azul-escuro);
+    transition: left 0.3s;
+    padding-top: 80px;
+    z-index: 1000;
+}
+
+.menuLateral.ativa
+{
+    left: 0;
+}
+
+.menuLateral ul
+{
+    list-style: white;
+    padding: 0px;
+    margin: 0px;
+}
+
+.menuLateral a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 15px 20px;
+    border-bottom: 1px solid #1a1a2e;
+}
