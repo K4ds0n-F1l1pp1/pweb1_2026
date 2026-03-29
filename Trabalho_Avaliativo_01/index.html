@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarVows - Vendas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="icon" type="png" href="./assets/icon-porsche.png">
+</head>
+
+<body>
+
+    <header class="p-3 fixed-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="carvows">CARVOWS</h1>
+            <nav class="navbar navbar-expand-lg" id="nav-header">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-light" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="./Paginas/sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="./Paginas/concessionarias.html">Concessionárias</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="./Paginas/modelos.html">Modelos</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="./Paginas/contato.html">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="#">Conta</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <div id="carossel-lancamento" class="carousel slide border-slide rounded-5 overflow-hidden">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carossel-lancamento" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Frente"></button>
+                <button type="button" data-bs-target="#carossel-lancamento" data-bs-slide-to="1" aria-label="frente-lateral"></button>
+                <button type="button" data-bs-target="#carossel-lancamento" data-bs-slide-to="2" aria-label="lateral"></button>
+                <button type="button" data-bs-target="#carossel-lancamento" data-bs-slide-to="3" aria-label="lateral-traseira"></button>
+                <button type="button" data-bs-target="#carossel-lancamento" data-bs-slide-to="4" aria-label="traseira"></button>
+                <button type="button" data-bs-target="#carossel-lancamento" data-bs-slide-to="5" aria-label="roda"></button>
+                <button type="button" data-bs-target="#carossel-lancamento" data-bs-slide-to="6" aria-label="interior"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./assets/porsche_911/911 Carrera GTS (frente).jfif" class="d-block w-100" alt="Porsche 911">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="slide-text">Novo Porsche 911 GTS 2026</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/porsche_911/911 Carrera GTS (frente-lateral).jfif" class="d-block w-100" alt="Porsche 911">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/porsche_911/911 Carrera GTS (lateral).jfif" class="d-block w-100" alt="Porsche 911">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/porsche_911/911 Carrera GTS (lateral-traseira).jfif" class="d-block w-100" alt="Porsche 911">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/porsche_911/911 Carrera GTS (traseira).jfif" class="d-block w-100" alt="Porsche 911">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/porsche_911/911 Carrera GTS (roda).jfif" class="d-block w-100" alt="Porsche 911">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/porsche_911/911 Carrera GTS (interior).jfif" class="d-block w-100" alt="Porsche 911">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carossel-lancamento" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next ca" type="button" data-bs-target="#carossel-lancamento" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+        
+    </main>
+
+    <footer style="margin-top: 500px">
+        <p>&copy; 2026 CarVows - Todos os direitos reservados - Trabalho de Programação</p>
+        <div>
+            <a href="#" class="text-white me-3"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="text-white me-3"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-white"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
