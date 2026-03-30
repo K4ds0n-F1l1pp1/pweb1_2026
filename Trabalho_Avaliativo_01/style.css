@@ -102,3 +102,8 @@ footer
     object-fit: cover;
     object-position: center;
 }
+
+#tituloCard
+{
+    font-family: var(--font-porsche-speed);
+}
