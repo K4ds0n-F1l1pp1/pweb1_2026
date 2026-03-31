@@ -107,3 +107,29 @@ footer
 {
     font-family: var(--font-porsche-speed);
 }
+
+#imagemCard
+{
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+#imagemCardVolvo
+{
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.lineGuide
+{
+    background-color: var(--arenarot);
+    color: var(--white);
+    font-family: var(--font-porsche-modern);
+}
+
+#sectionModels
+{
+    /* margin-top: 20px; */
+    background-color: var(--arenarot);
+}
