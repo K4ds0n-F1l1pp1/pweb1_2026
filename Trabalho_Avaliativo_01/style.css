@@ -78,6 +78,20 @@ footer
     text-align: center;
 }
 
+/* Accordion INFOS */
+
+.acordionTitulo
+{
+    font-family: var(--font-porsche-speed);
+    color: var(--preto);
+}
+
+.acordionText
+{
+    font-family: var(--font-porsche-info);
+    color: var(--preto);
+}
+
 /* CAROUSSEL: */
 
 .slide-text
@@ -167,4 +181,101 @@ footer
     font-family: var(--font-porsche-info);
     color: var(--preto);
     font-size: 3rem;
+}
+
+/* SOBRE */
+
+.sobreEmpresa
+{
+    font-family: var(--font-porsche-info);
+    color: var(--arenarot);
+}
+
+#accordionSobre
+{
+    background-color: var(--white);
+    color: var(--preto);
+}
+
+/* CONCESSIONÁRIAS */
+
+.card {
+  min-height: 500px;
+  border-radius: 12px;
+  border: 1px solid var(--modegrau);
+  box-shadow: none;
+}
+
+.card-title {
+  font-family: var(--font-porsche-info);
+  font-size: 1.2rem;
+  color: var(--preto);
+}
+
+.card-body {
+  background-color: var(--white);
+  color: var(--preto);
+}
+
+.card iframe {
+  height: 300px;
+  border-bottom: 1px solid var(--modegrau);
+}
+
+.accordion-button {
+  font-family: var(--font-porsche-info);
+  font-weight: normal;
+  color: var(--preto);
+  background-color: var(--begelight);
+}
+
+.accordion-body {
+  font-family: var(--font-montserrat);
+  font-size: 0.95rem;
+  color: var(--preto);
+}
+
+/* MODELOS */
+
+.img-model {
+    height: 450px !important;
+    object-fit: cover;
+}
+
+.btn-buy {
+    background-color: var(--arenarot);
+    color: var(--white);
+    font-family: var(--font-porsche-speed);
+    font-size: 0.8rem;
+    border: none;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.btn-buy:hover {
+    background-color: var(--eichengruen);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+#tituloCard {
+    font-family: var(--font-porsche-speed);
+    font-size: 1.4rem;
+    color: var(--eichengruen);
+    border-bottom: 2px solid var(--arenarot);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.asideModelos {
+    min-height: 450px;
+    border-left: 1px solid var(--marmore);
+}
+
+@media (max-width: 991px) {
+    aside {
+        min-height: auto;
+        border-left: none;
+        border-top: 1px solid var(--marmore);
+    }
 }
