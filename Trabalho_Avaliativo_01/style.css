@@ -60,14 +60,18 @@ header
     font-family: var(--font-porsche-info);
 }
 
-body
+body {
+  background-color: var(--marmore);
+  padding-top: 80px;
+}
+
+main
 {
-    background-color: var(--marmore);
+    margin-top: 50px;
 }
 
 footer
 {
-    margin-top: 700px;
     padding: 17px;
     background-color: var(--eichengruen);
     color: var(--white);
@@ -83,7 +87,6 @@ footer
 
 #carossel-lancamento
 {
-    margin-top: 100px;
     border-radius: 12px;
 }
 
@@ -132,4 +135,36 @@ footer
 {
     /* margin-top: 20px; */
     background-color: var(--arenarot);
+}
+
+.textModels
+{
+    font-size: 1.8rem;
+    margin-top: 1rem;
+}
+
+.values
+{
+    font-family: var(--font-montserrat);
+    font-size: 18px;
+    color: var(--preto);
+}
+
+.valueTitulo
+{
+    font-family: var(--font-porsche-info);
+    font-size: 3rem;
+}
+
+.valueText
+{
+    font-family: var(--font-porsche-info);
+    color: var(--preto);
+}
+
+.marcas
+{
+    font-family: var(--font-porsche-info);
+    color: var(--preto);
+    font-size: 3rem;
 }
