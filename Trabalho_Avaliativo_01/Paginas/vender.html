@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - CARVOWS</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <header class="p-3 fixed-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="carvows">CARVOWS</h1>
+            <nav class="navbar navbar-expand-lg" id="nav-header">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-light" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="./sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="./concessionarias.html">Concessionárias</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="./modelos.html">Modelos</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="./contato.html">Contato</a></li>
+                </ul>
+            </nav>
+
+            <a href="./Paginas/vender.html" class="btn ms-3 text-light">
+                <i class="fa-solid fa-car"></i> Quero Vender
+            </a>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <section class="col-lg-8 bg-white p-5 rounded shadow-sm">
+                <h1 class="carvows mb-3" style="color: var(--eichengruen);">Quero Vender</h1>
+                <p class="valueText mb-4">Preencha os dados básicos do seu veículo para uma pré-avaliação da nossa curadoria.</p>
+                
+                <form action="#" method="POST" class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label valueText fw-bold">Nome Completo</label>
+                        <input type="text" class="form-control custom-input" placeholder="Seu nome" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label valueText fw-bold">Telefone/WhatsApp</label>
+                        <input type="tel" class="form-control custom-input" placeholder="(00) 00000-0000" required>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label valueText fw-bold">Marca</label>
+                        <input type="text" class="form-control custom-input" placeholder="Ex: Porsche" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label valueText fw-bold">Modelo</label>
+                        <input type="text" class="form-control custom-input" placeholder="Ex: 911 Carrera GTS" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label valueText fw-bold">Ano</label>
+                        <input type="number" class="form-control custom-input" placeholder="2024" required>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label class="form-label valueText fw-bold">Quilometragem</label>
+                        <input type="text" class="form-control custom-input" placeholder="Ex: 5.000 km" required>
+                    </div>
+
+                    <div class="col-12">
+                        <label class="form-label valueText fw-bold">Observações (Opcional)</label>
+                        <textarea class="form-control custom-input" rows="3" placeholder="Conte-nos sobre o estado do carro ou opcionais exclusivos..."></textarea>
+                    </div>
+
+                    <div class="col-12 mt-4">
+                        <button type="submit" class="btn btn-requisitar w-100 py-3 text-uppercase">Enviar para Análise</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;2026 CarVows - Todos os direitos reservados - Trabalho de Programação</p>
+        <div>
+            <a href="#" class="text-white me-3"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="text-white me-3"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-white"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
