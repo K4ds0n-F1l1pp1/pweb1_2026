@@ -37,6 +37,25 @@
 
     <?php
 
+        # Matriz
+
+        $carros = [
+            ['modelo' => "Mustang", 'cor' => "Branco", 'ano' => 2026],
+            ['modelo' => "Sauber C9", 'cor' => "Silver", 'ano' => 1984],
+            ['modelo' => "Brasilia", 'cor' => "Vermelho", 'ano' => 1969]
+        ];
+
+        echo $carros[0]['modelo'] . " - " . $carros[0]['cor'];
+
+        foreach ($carros as $car)
+            {
+                echo "<br>";
+                foreach ($carros as $item)
+                    {
+                        echo "Modelo: " . $item['modelo'] . "Ano: " . $item['ano'];
+                    }
+            }
+
         $nomes = [];
 
         if ($_SERVER["REQUEST_METHOD"] == "POST")
