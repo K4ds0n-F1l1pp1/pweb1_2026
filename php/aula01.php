@@ -1,103 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificador de Dados</title>
+    <title>Document</title>
 </head>
 <body>
-    
-    <h1>PREENCHA OS DADOS:</h1>
+    <?php echo "Oi mundo PHP <br>";
 
-    <form method="POST" action="">
 
-        <?php
+    $nome = "Felipe";
+    $idade = 18;
+   
+    echo "Nome: $nome, Idade: $idade.";
 
-        # O vibes e o Codas
 
-        $listName = 0;
+    if ($idade >= 18){
+        echo "Maior de idade";
+    }else{
+        echo "Menor de idade";
+    }
 
-        while ($listName < 5)
-        {
-            echo "<br> <Label>Digite um nome: </br>
-                <input type='text' name='nome[]' maxlength='25'>";
 
-            $listName++;
-        }
+    $notas = [5, 6, 7, 8];
 
-        ?>
-        
-        <br><br>
 
-        <Label>Digite sua Idade: </Label>
-        <input type="number" name="idade" maxlength="3">
-        <button type="submit">Inserir Dados</button>
-        <br>
-    </form>
+    for ($i = 0; $i <count($notas); $i++){
+        echo $notas[$i]."<br>";
+    }
+    echo "<br>";
+    foreach ($notas as $item) {
+        echo $item . "<br>";
+    }
 
-    <?php
 
-        # Matriz
+    $nomes = ["Felipe", "Dudu", "Kadinho"];
 
-        $carros = [
-            ['modelo' => "Mustang", 'cor' => "Branco", 'ano' => 2026],
-            ['modelo' => "Sauber C9", 'cor' => "Silver", 'ano' => 1984],
-            ['modelo' => "Brasilia", 'cor' => "Vermelho", 'ano' => 1969]
+
+    for ($i = 0; $i <count($nomes); $i++){
+        echo $nomes[$i]."<br>";
+    }
+        echo "<br>";
+    foreach ($nomes as $item) {
+        echo $item . "<br>";
+    }
+
+
+    $carros = [
+        ["modelo"=>"Mustang", "cor" => "vermelho", "ano" => 1997],
+        ["modelo"=>"Sandeiro", "cor" => "Prata", "ano" => 2014],
+        ["modelo"=>"Brasilia", "cor" => "Amarela", "ano" => 1969],
         ];
 
-        echo $carros[0]['modelo'] . " - " . $carros[0]['cor'];
 
-        foreach ($carros as $carro)
-            {
-                echo "<br>";
-                foreach ($carro as $item)
-                    {
-                        echo "Modelo: " . $item['modelo'] . " - Ano: " . $item['ano'] . "<br>";
-                    }
-            }
+    echo $carros[0]["modelo"]. "-". $carros[0]["ano"];
 
-        $nomes = [];
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST")
-        {
-            $idade = $_POST["idade"];
-            $nome = $_POST["nome"];
-
-            if (!empty($idade) && !empty($nome))
-            {
-
-                if ($idade < 18)
-                {
-                    echo "<hr style='margin-top: 12px; margin-bottom: 12px'>Você é de menor! <br>";
-                }
-
-                if ($idade >= 18)
-                {
-                    echo "<hr style='margin-top: 12px; margin-bottom: 12px'>Você é de maior! <br>";
-                }
-
-                echo "Lista de Nomes:";
-                echo "<ul>";
-
-                    foreach ($nome as $itemNome)
-                    {
-                        if (!empty($itemNome))
-                        {
-                            echo "<li>" . htmlspecialchars($itemNome) . "</li>";
-                        }
-                    }
-
-                echo "</ul> <br>";
-            }
-
+    foreach($carros as $carro){
+        echo "<br>";
+        foreach($carro as $item){
+            echo "Modelo:" . $item['modelo'] . "Ano:" . $item['ano'];
         }
+    }
+
 
     ?>
+   
 
-    <a href="./aula01.php">
-        <br>
-        <button style="color: red;">RELOAD</button>
-    </a>
 
+    <p>Meu Site <?= $carros[0]["modelo"]. "-". $carros[0]["ano"];?> ?></p>
 </body>
 </html>
