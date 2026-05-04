@@ -47,12 +47,12 @@
 
         echo $carros[0]['modelo'] . " - " . $carros[0]['cor'];
 
-        foreach ($carros as $car)
+        foreach ($carros as $carro)
             {
                 echo "<br>";
-                foreach ($carros as $item)
+                foreach ($carro as $item)
                     {
-                        echo "Modelo: " . $item['modelo'] . "Ano: " . $item['ano'];
+                        echo "Modelo: " . $item['modelo'] . " - Ano: " . $item['ano'] . "<br>";
                     }
             }
 
