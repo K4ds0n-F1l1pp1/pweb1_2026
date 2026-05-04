@@ -8,7 +8,6 @@
 <body>
     <?php echo "Oi mundo PHP <br>";
 
-
     $nome = "Felipe";
     $idade = 18;
    
@@ -16,9 +15,9 @@
 
 
     if ($idade >= 18){
-        echo "Maior de idade";
+        echo "<br> Maior de idade. <br>";
     }else{
-        echo "Menor de idade";
+        echo "<br> Menor de idade. <br>";
     }
 
 
