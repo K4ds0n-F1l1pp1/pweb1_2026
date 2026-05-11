@@ -49,7 +49,7 @@ class db {
 
         try 
         {
-            $sql = "INSERT INTO tabela ($campos) VALUES ($marcadores);";
+            $sql = "INSERT INTO $this->table_name ($campos) VALUES ($marcadores);";
             $statement = $this->conn->prepare($sql);
 
             $statement->execute($vetorData);
