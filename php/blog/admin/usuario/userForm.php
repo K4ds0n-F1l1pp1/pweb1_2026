@@ -8,9 +8,20 @@ $db = new db('usuarios');
 if (!empty($_POST))
 {
     $db->store($_POST);
+    
+    echo "<script>
+            setTimeout(() => window.location.href='./userList.php', 1500);
+        </script>";
+
 }
 
 ?>
+
+<div class="row">
+    <div class="col">
+        <a href="./userList.php" class="btn btn-success">Voltar</a>
+    </div>
+</div>
 
 <div class="col">
     <form action="userForm.php" method="POST">
@@ -31,6 +42,7 @@ if (!empty($_POST))
 
         <div class="col mt-4">
             <button type="submit" class="btn btn-success">Salvar</button>
+            <a href="./userList.php" class="btn btn-danger">Voltar</a>
         </div>
     </form>
 </div>

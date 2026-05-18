@@ -59,4 +59,13 @@ class db {
         
     }
 
+    public function all()
+    {
+        $sql = "SELECT * FROM $this->table_name";
+        $statement = $this->conn->prepare($sql);
+        $statement->execute();
+
+        return $statement->fetchAll(PDO::FETCH_CLASS);
+    }
+
 }
