@@ -13,6 +13,34 @@
 
   </head>
 
+  <?php
+
+  function actionMessage($success, $error)
+  {
+    if (!empty($success))
+    {
+      echo "<div class='alert alert-success' role='alert'>
+              <srong>$success</srong>
+            </div>";
+    }
+
+    else if ($error)
+    {
+      echo "<div class='alert alert-danger' role='alert'>
+              <srong>$error</srong>
+            </div>";
+    }
+  }
+
+  function redirect($page, $time = 1500)
+  {
+    echo "<script>
+                setTimeout(() => window.location.href='$page', $time);
+          </script>";
+  }
+
+  ?>
+
   <body>
 
     <div class="container">

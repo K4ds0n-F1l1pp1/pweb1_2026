@@ -4,6 +4,7 @@ include '../header.php';
 include_once '../database/db.class.php';
 
 $db = new db('usuarios');
+$db->deleteUser();
 
 if (!empty($_POST))
 {
@@ -11,8 +12,6 @@ if (!empty($_POST))
 } else {
     $dados = $db->all();
 }
-
-
 
 ?>
 
@@ -30,6 +29,7 @@ if (!empty($_POST))
                 <th scope="col">NOME</th>
                 <th scope="col">TELEFONE</th>
                 <th scope="col">E-MAIL</th>
+                <th scope="col">AÇÕES</th>
             </tr>
         </thead>
         <tbody>
@@ -42,6 +42,13 @@ if (!empty($_POST))
                             <td>$item->nome</td>
                             <td>$item->telefone</td>
                             <td>$item->email</td>
+                            <td>
+                                <a href='?action=deleteUser&id=$item->id' 
+                                class='btn btn-danger btn-sm' 
+                                onclick='return confirm(\"Tem certeza que deseja excluir este usuário?\");'>
+                                Excluir
+                                </a>
+                            </td>
                         </tr>";
                 }
 

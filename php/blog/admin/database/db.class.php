@@ -68,4 +68,27 @@ class db {
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
+    public function deleteUser()
+    {
+        if (isset($_GET['action']) && $_GET['action'] === 'deleteUser' && isset($_GET['id'])) 
+        {
+            $idDeleted = $_GET['id'];
+            
+            try {
+                $sql = "DELETE FROM $this->table_name WHERE id = :id";
+                $statement = $this->conn->prepare($sql);
+
+                $statement->bindParam(':id', $idDeleted, PDO::PARAM_INT);
+                $statement->execute();
+
+                header("Location: " . $_SERVER['PHP_SELF']);
+                exit();
+
+            } catch (PDOException $e) {
+                echo "Erro ao excluir no banco de dados: " . $e->getMessage();
+                exit();
+            }
+        }
+    }
+
 }
