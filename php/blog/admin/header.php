@@ -39,6 +39,11 @@
           </script>";
   }
 
+  function getFormValue($data, $field = '')
+  {
+    return isset($data->$field) ? $data->$field : 
+  }
+
   ?>
 
   <body>

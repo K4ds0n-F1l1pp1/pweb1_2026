@@ -15,6 +15,8 @@ if (!empty($_GET['id']))
 
 if (!empty($_POST))
 {
+    $data = (object) $_POST;
+
     try {
         $db->store($_POST);
 
@@ -39,19 +41,21 @@ if (!empty($_POST))
     <?php actionMessage($success, $error); ?>
     <div class="col">
         <form action="userForm.php" method="POST">
+
+        <input type="hidden" name="id" value="<?php echo $data->id ?? '' ?>">
             <div class="col-6">
                 <label for="nome">Nome: </label>
-                <input type="text" name="nome" class="form-control" maxlength="35" required> 
+                <input type="text" name="nome" class="form-control" value="<?php echo getFormValue($data, 'nome') ?>" maxlength="35" required> 
             </div>
 
             <div class="col-6">
                 <label for="email">E-mail: </label>
-                <input type="email" name="email" class="form-control" required> 
+                <input type="email" name="email" class="form-control" value="<?php echo getFormValue($data, 'email') ?>"required> 
             </div>
 
             <div class="col-6">
                 <label for="telefone">Telefone: </label>
-                <input type="text" name="telefone" class="form-control" required> 
+                <input type="text" name="telefone" class="form-control" value="<?php echo getFormValue($data, 'telefone') ?>"required> 
             </div>
 
             <div class="col mt-4">
