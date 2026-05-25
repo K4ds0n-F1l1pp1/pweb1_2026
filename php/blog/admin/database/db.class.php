@@ -91,4 +91,30 @@ class db {
         }
     }
 
+    public function search($dados)
+    {
+        $campo = $dados['tipo'];
+        $valor = $dados['valor'];
+
+        try {
+            $sql = "SELECT * FROM $this->table_name WHERE $campo LIKE ?";
+            $statement = $this->conn->prepare($sql);
+            $statement->execute(["%$valor%"]);
+        } catch (PDOException $e) {
+                echo "Erro ao buscar no banco de dados: " . $e->getMessage();
+                exit();
+        }
+
+        return $statement->fetchAll(PDO::FETCH_CLASS);
+    }
+
+        public function find($id)
+    {
+        $sql = "SELECT * FROM $this->table_name WHERE id = ?";
+        $statement = $this->conn->prepare($sql);
+        $statement->execute([$id]);
+
+        return $statement->fetchObject();
+    }
+
 }

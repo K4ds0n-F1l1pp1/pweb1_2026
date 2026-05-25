@@ -8,6 +8,11 @@ $db = new db('usuarios');
 $success = '';
 $error = '';
 
+if (!empty($_GET['id']))
+{
+    $data = $db->find($_GET['id']);
+}
+
 if (!empty($_POST))
 {
     try {
