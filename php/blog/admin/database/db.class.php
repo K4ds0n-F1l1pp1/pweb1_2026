@@ -117,4 +117,32 @@ class db {
         return $statement->fetchObject();
     }
 
+    public function update($dados)
+    {
+        $campos = "";
+        $marcadores = "";
+        $vetorData = [];
+        $sep = "";
+
+        foreach ($dados as $campo => $valor)
+        {
+            $campos .= $sep . $campo;
+            $marcadores .= $sep . "?";
+            $vetorData[] = $valor;
+            $sep = ",";
+        }
+
+        try 
+        {
+            $vetorData[] = $dados['id'];
+            $sql = "UPDATE $this->table_name SET $campos = $marcadores WHERE id = ?;";
+            $statement = $this->conn->prepare($sql);
+
+            $statement->execute($vetorData);
+        } catch (PDOException $e) {
+            var_dump("Erro ao inserir. ", $e->getMessage());
+        }
+        
+    }
+
 }
