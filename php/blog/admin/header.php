@@ -20,20 +20,27 @@
       session_start();
   }
 
-  function actionMessage($success, $error)
+  function actionMessage($success, $errors)
   {
     if (!empty($success))
     {
       echo "<div class='alert alert-success' role='alert'>
-              <srong>$success</srong>
+              <strong>$success</strong>
             </div>";
     }
-
-    else if ($error)
+    else if (!empty($errors))
     {
-      echo "<div class='alert alert-danger' role='alert'>
-              <srong>$error</srong>
-            </div>";
+      echo "<div class='alert alert-danger' role='alert'><ul>";
+
+      if (is_array($errors)) {
+          foreach ($errors as $erro) {
+              echo $erro; 
+          }
+      } else {
+          echo "<li>$errors</li>";
+      }
+
+      echo "</ul></div>";
     }
   }
 

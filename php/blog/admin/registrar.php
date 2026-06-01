@@ -37,14 +37,14 @@ if (!empty($_POST))
                 'nome' => $_POST['nome'],
                 'email' => $_POST['email'],
                 'telefone' => $_POST['telefone'],
-                'senha' => $_POST['senha'],
+                'senha' => password_hash($_POST['senha'], PASSWORD_DEFAULT)
             ];
 
             $db->store($dados);
 
-            $success = "Registro Salvo com Sucesso!";
+            $success = "Usuário Cadastrado Sucesso!";
             
-            redirect('./userList.php', 750);
+            redirect('./login.php', 750);
         }
         
     } catch (Exception $e) {
@@ -86,6 +86,10 @@ if (!empty($_POST))
             <div class="col mt-4">
                 <button type="submit" class="btn btn-success">Salvar</button>
                 Já tem uma conta? <a href="./login.php" class="btn btn-danger">Entrar</a>
+            </div>
+
+            <div class="col mt-4">
+                <a href="./usuario/userList.php" class="btn btn-danger">Lista</a>
             </div>
         </form>
     </div>

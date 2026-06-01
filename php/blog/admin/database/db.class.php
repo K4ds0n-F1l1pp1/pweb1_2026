@@ -108,11 +108,20 @@ class db {
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
-        public function find($id)
+    public function find($id)
     {
         $sql = "SELECT * FROM $this->table_name WHERE id = ?";
         $statement = $this->conn->prepare($sql);
         $statement->execute([$id]);
+
+        return $statement->fetchObject();
+    }
+
+    public function findBy($campo, $valor)
+    {
+        $sql = "SELECT * FROM $this->table_name WHERE $campo = ?";
+        $statement = $this->conn->prepare($sql);
+        $statement->execute([$valor]);
 
         return $statement->fetchObject();
     }

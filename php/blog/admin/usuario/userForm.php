@@ -38,26 +38,12 @@ if (!empty($_POST))
             $errors[] = "<li>Insira um endereço de e-mail válido!</li>";
         }
 
-        if (empty($_POST['cpf'])) 
-        {
-            $errors[] = "<li>O CPF é obrigatório!</li>";
-        } 
-        else 
-        {
-            $cpfLimpo = preg_replace('/[^0-9]/', '', $_POST['cpf']);
-            if (strlen($cpfLimpo) !== 11) 
-            {
-                $errors[] = "<li>O CPF deve conter exatamente 11 dígitos numéricos!</li>";
-            }
-        }
-
         if (empty($errors))
         {
             $dados = [
                 'nome'     => $_POST['nome'],
                 'email'    => $_POST['email'],
                 'telefone' => $_POST['telefone'],
-                'cpf'      => $_POST['cpf']
             ];
 
             $db->store($dados);
@@ -99,11 +85,6 @@ if (!empty($_POST))
             <div class="col-6">
                 <label for="telefone">Telefone: </label>
                 <input type="text" name="telefone" class="form-control" value="<?php echo getFormValue($data, 'telefone') ?>" required> 
-            </div>
-
-            <div class="col-6">
-                <label for="cpf">CPF: </label>
-                <input type="text" name="cpf" class="form-control" value="<?php echo getFormValue($data, 'cpf') ?>" placeholder="000.000.000-00" required> 
             </div>
 
             <div class="col mt-4">
