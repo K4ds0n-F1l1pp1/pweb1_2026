@@ -32,7 +32,8 @@ if (isset($_POST['btn-buscar'])) {
         <div class="row align-items-end">
             <div class="col-md-4 col-sm-12">
                 <label for="tipo" class="form-label"><strong>Tipo:</strong></label>
-                <select name="tipo" id="tipo" class="form-control"> 
+                <select name="tipo" id="tipo" class="form-control">
+                    <option value="#"></option>
                     <option value="nome">Nome</option>
                     <option value="cpf">CPF</option>
                     <option value="email">E-mail</option>

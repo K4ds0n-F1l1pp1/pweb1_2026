@@ -126,10 +126,13 @@ class db {
 
         foreach ($dados as $campo => $valor)
         {
-            $campos .= $sep . $campo;
-            $marcadores .= $sep . "?";
-            $vetorData[] = $valor;
-            $sep = ",";
+            if ($campo !== 'id')
+            {
+                $campos .= $sep . $campo;
+                $marcadores .= $sep . "?";
+                $vetorData[] = $valor;
+                $sep = ",";
+            }
         }
 
         try 

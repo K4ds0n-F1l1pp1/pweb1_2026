@@ -15,6 +15,11 @@
 
   <?php
 
+  if (session_status() === PHP_SESSION_NONE)
+  {
+      session_start();
+  }
+
   function actionMessage($success, $error)
   {
     if (!empty($success))
